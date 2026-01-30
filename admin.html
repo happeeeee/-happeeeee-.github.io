@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>后台管理 - 筑云小阁</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="admin-container">
+    <h2>网站后台管理（筑云小阁）</h2>
+
+    <section class="login-box">
+      <p>输入 GitHub Personal Access Token (PAT) 用于写入仓库（不会保存到仓库）。参考 README 中的生成步骤。</p>
+      <input id="input-token" type="password" placeholder="ghp_xxx..." />
+      <button id="btn-auth">登录（验证 Token）</button>
+      <p id="auth-result" class="muted"></p>
+    </section>
+
+    <section id="create-article" class="panel hidden">
+      <h3>创建 / 上传 文章</h3>
+      <label>标题：<input id="article-title" /></label>
+      <label>目录 (例如 articles/tech)：<input id="article-dir" value="articles" /></label>
+      <label>文件名 (不含扩展名)：<input id="article-slug" /></label>
+      <label>是否加密：<input id="article-encrypt" type="checkbox" /></label>
+      <label id="password-label" class="hidden">密码：<input id="article-password" type="password" /></label>
+      <label>封面 / 图片上传：<input id="image-file" type="file" accept="image/*" /></label>
+      <label>文章内容 (Markdown)：</label>
+      <textarea id="article-content" rows="12"></textarea>
+      <button id="btn-publish">发布文章到仓库</button>
+      <p id="publish-result" class="muted"></p>
+    </section>
+
+    <section id="site-config" class="panel hidden">
+      <h3>站点配置（config.json）</h3>
+      <textarea id="config-editor" rows="8"></textarea>
+      <button id="btn-save-config">保存配置到仓库</button>
+      <p id="config-result" class="muted"></p>
+    </section>
+
+    <section class="panel">
+      <h3>说明</h3>
+      <ul>
+        <li>上传时��要 config.json 中的 owner 与 repo （我已为你设置为 happeeeee / happeeeee.github.io）。</li>
+        <li>不要把你的 PAT 保存到任何仓库文件。</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+  <script src="assets/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>筑云小阁</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div id="bg-layer"></div>
+
+  <header class="site-header">
+    <h1 id="site-title">筑云小阁</h1>
+    <p id="site-subtitle">曲终人不见，江上数峰青</p>
+    <div id="site-age" class="site-age"></div>
+    <nav id="site-nav"></nav>
+  </header>
+
+  <main class="content">
+    <section id="articles"></section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="footer-year"></span> <span id="owner-name"></span></small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+
+  <script src="assets/main.js"></script>
+
+  <!-- 评论区域（Giscus 占位，会根据 config.json 配置加载） -->
+  <div id="comments-container"></div>
+</body>
+</html>
