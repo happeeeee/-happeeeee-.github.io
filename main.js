@@ -15,7 +15,7 @@
     if(cfg.background.type === 'image') document.documentElement.style.setProperty('--bg-image', `url(${cfg.background.value})`);
   }
 
-  document.getElementById('site-title').textContent = cfg.title || '我的学生网站';
+  document.getElementById('site-title').textContent = cfg.title || '筑云小阁';
   document.getElementById('site-subtitle').textContent = cfg.subtitle || '';
   document.getElementById('owner-name').textContent = cfg.owner || '';
 
