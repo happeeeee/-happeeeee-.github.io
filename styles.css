@@ -1,0 +1,51 @@
+:root{
+  --bg-color: #0b1020;
+  --text-color: #e9eef8;
+  --accent: #6cc3ff;
+  --card-bg: rgba(255,255,255,0.03);
+  --max-width: 900px;
+  --bg-image: none;
+}
+
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg-color) var(--bg-image) center/cover fixed;
+  color:var(--text-color);
+  -webkit-font-smoothing:antialiased;
+}
+#bg-layer{
+  position:fixed; inset:0; z-index:-1; background:transparent;
+}
+
+/* header */
+.site-header{
+  text-align:center;
+  padding:32px 10px;
+}
+.site-header h1{margin:0;font-size:2rem;color:var(--accent)}
+.site-header p{margin:6px 0 0 0;color: #d0d7e6}
+.site-age{margin-top:8px;color:#9fb6d4}
+
+/* content */
+.content{max-width:var(--max-width); margin:20px auto; padding:0 16px}
+.article{
+  background:var(--card-bg);
+  padding:18px;border-radius:8px;margin:16px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.article h2{margin:0 0 8px}
+.article .meta{color:#9fb6d4;font-size:0.9rem;margin-bottom:10px}
+.article .excerpt{color:#d8e6ff}
+
+/* footer */
+.site-footer{padding:24px;text-align:center;color:#9fb6d4}
+
+/* admin */
+.admin-container{max-width:800px;margin:24px auto;padding:16px}
+.panel{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;margin-top:12px}
+.hidden{display:none}
+input,textarea,select{width:100%;box-sizing:border-box;margin:6px 0;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text-color)}
+button{background:var(--accent);border:none;padding:10px 14px;color:#012;cursor:pointer;border-radius:6px}
+.muted{color:#9fb6d4;font-size:0.9rem}
