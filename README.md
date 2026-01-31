@@ -21,5 +21,3 @@
 - config.json (已填你的信息)
 - articles/nihao-shijie.md （示例文章）
 - articles/index.json （示例文章索引）
-
-下一步请确认这些文件内容，确认无误后我会告诉你如何在 GitHub 页面上一步步上传（按你选的交付方式 A）。
